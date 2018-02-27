@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset= "utf-8">
+	<title>控制div属性</title>
+	<style>
+	  #button{text-align: center;}
+	  #box{height:100px; width:100px; background:red;margin:10px auto;}
+	</style>
+  	<script type="text/javascript">
+  		window.onload= function (){
+  			var blo= document.getElementById('box');
+  			var butx= document.getElementsByTagName('input');
+  			for (var i = 0; i < butx.length; i++) {
+  				if (i==0){
+  					butx[i].onclick=function () {
+  						blo.style.width="200px";
+  					}
+  				}
+  				else if (i==1){
+  					butx[i].onclick=function () {
+  						blo.style.height="200px";
+  					}
+  				}
+  				else if (i==2){
+  					butx[i].onclick=function () {
+  						blo.style.background="blue";
+  					}
+  				}
+  				else if (i==3){
+  					butx[i].onclick=function () {
+  						blo.style.visibility="hidden";
+  					}
+  				}
+  				else{
+  					butx[i].onclick=function () {
+  						blo.style={visibility:"visible"};
+  					}
+  				}
+  			}
+  		}
+  	</script>
+  </head>
+  <body>
+    <div id="button">
+	  <input type= "button" value="变宽">
+	  <input type= "button" value="变高">
+	  <input type= "button" value="变色">
+	  <input type= "button" value="隐藏">
+	  <input type= "button" value= "重置">
+	</div>
+    <div id="box"></div>
+  </body>
+</html>
