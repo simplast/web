@@ -1,0 +1,10 @@
+#div{
+	margin:auto;
+	padding:100px;
+	width:500px;
+	border:1px solid green;
+	background-image: url("http://t.cn/REfggeI");
+}
+#div1,#div2{
+	text-align: center;
+}
