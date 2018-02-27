@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>电子钟</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/clock.css">
+</head>
+<body>
+	<div id= "div">
+		<div id="div1">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+
+
+		</div>
+		<div id="div2">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+			<img src="">
+		</div>
+	</div>
+	<script type="text/javascript">
+		function start(){
+			var oImg = document.getElementsByTagName("img");
+			var temp = getSrcArray(getTimeArray());
+			var src = "../images/";
+
+			for(var i=0;i<oImg.length;i++){
+				oImg[i].src = src+temp[i]+".png";
+				
+			}
+		}
+
+		start()
+		setInterval(start,200);
+
+		function bigWeek(x){
+			var tem =["seven","one","two","three","four","five","six"];
+			return tem[x];
+		}
+		
+		function getTimeArray(){
+			var now = new Date();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			var seconds = now.getSeconds();
+			var year = now.getFullYear();
+			var month = now.getMonth()+1;
+			var day = now.getDate();
+			var week = bigWeek(now.getDay());
+			return [year,"year",month,"month",day,"seven",hours,"sign",minutes,"sign",seconds,"week",week];
+		}
+
+        function toDouble(x){
+			if(x<10){
+				return "0"+x;
+			}
+			else{
+				return ""+x;
+			}
+		}
+		function getSrcArray(x){
+			var srcArray = [];
+			for(var i=0;i<x.length;i++){
+				if(typeof(x[i])==="number"){
+					var temp = toDouble(x[i]);
+					srcArray.push.apply(srcArray,temp.split(""))
+				}
+				else{
+					srcArray.push(x[i]);
+				}
+			}
+			return srcArray;
+		}
+
+		function setSrc(x){
+			
+			return ;
+			
+		}
+
+
+		
+		
+	</script>
+</body>
+</html>
