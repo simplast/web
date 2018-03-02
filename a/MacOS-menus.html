@@ -20,13 +20,11 @@
 		var img = menu.getElementsByTagName("img");
 		var aWidth = [];
 		var i = 0;
-	//保存原宽度, 并设置当前宽度
 	for (i = 0; i < img.length; i++)
 	{
 		aWidth.push(img[i].offsetWidth);
 		img[i].width = parseInt(img[i].offsetWidth / 2);
 	}
-	//鼠标移动事件
 	document.onmousemove = function (event)
 	{
 		var event = event || window.event;
@@ -47,7 +45,7 @@
 <body>
 	<div id="div1">
 	<div id="menu">
-		<img src="./images/icon-1.png" />
+		<img src="../images/icon-1.png" />
 		<img src="./images/icon-2.png" />
 		<img src="./images/icon-3.png" />
 		<img src="./images/icon-4.png" />
