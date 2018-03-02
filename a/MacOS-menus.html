@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>仿苹果电脑菜单</title>
+	<style type="text/css">
+	*{margin:0;padding:0}
+	#div1{
+		height:500px;
+		position: relative;
+	}
+	#menu{position:absolute;bottom:0;width:100%;text-align:center;}
+
+</style>
+<script type="text/javascript">
+	window.onload = function ()
+	{
+		var menu = document.getElementById("menu");
+		var img = menu.getElementsByTagName("img");
+		var aWidth = [];
+		var i = 0;
+	//保存原宽度, 并设置当前宽度
+	for (i = 0; i < img.length; i++)
+	{
+		aWidth.push(img[i].offsetWidth);
+		img[i].width = parseInt(img[i].offsetWidth / 2);
+	}
+	//鼠标移动事件
+	document.onmousemove = function (event)
+	{
+		var event = event || window.event;
+		for (i = 0; i < img.length; i++)
+		{
+			var a = event.clientX - img[i].offsetLeft - img[i].offsetWidth / 2;
+			var b = event.clientY - img[i].offsetTop - menu.offsetTop - img[i].offsetHeight / 2;
+			var c = 1 - Math.sqrt(a * a + b * b) / 300;
+			if (c < 0.5) {
+				c = 0.5;
+			}
+			img[i].width = aWidth[i] * c
+		}
+	};
+};
+</script>
+</head>
+<body>
+	<div id="div1">
+	<div id="menu">
+		<img src="./images/icon-1.png" />
+		<img src="./images/icon-2.png" />
+		<img src="./images/icon-3.png" />
+		<img src="./images/icon-4.png" />
+		<img src="./images/icon-5.png" />
+		<img src="./images/icon-6.png" />
+	</div>
+	</div>
+</body>
+</html>
