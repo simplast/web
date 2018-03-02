@@ -30,8 +30,8 @@
 		var event = event || window.event;
 		for (i = 0; i < img.length; i++)
 		{
-			var a = event.clientX - img[i].offsetLeft - img[i].offsetWidth / 2;
-			var b = event.clientY - img[i].offsetTop - menu.offsetTop - img[i].offsetHeight / 2;
+			var a = event.clientX - img[i].offsetLeft - img[i].offsetWidth / 1.3;
+			var b = event.clientY - img[i].offsetTop - menu.offsetTop - img[i].offsetHeight /1.3;
 			var c = 1 - Math.sqrt(a * a + b * b) / 300;
 			if (c < 0.5) {
 				c = 0.5;
