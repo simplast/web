@@ -644,7 +644,6 @@ width:1230px;
 }
 
 .gul-content-module ul {
-text-align-last:justify;
 font-size:0;
 height:310px;
 }
@@ -652,8 +651,11 @@ height:310px;
 .gul-content-module ul li {
 width:235px;
 margin-bottom:7px;
+margin-right:13px;
 }
-
+.gul-content-module ul li:last-child{
+margin-right:0;
+}
 .gul-content-module ul li a.grid-small {
 box-sizing:border-box;
 background-color:#FFF;
