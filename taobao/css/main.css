@@ -18,7 +18,6 @@ font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
 
 
 body>div{
-  min-width:960px;
   margin:0 auto;
 box-sizing: border-box;
 width: 1351px;
@@ -641,6 +640,7 @@ opacity:0.6;
 }
 
 .gul-content-module {
+overflow: hidden;
 width:1230px;
 }
 
@@ -650,6 +650,7 @@ height:310px;
 }
 
 .gul-content-module ul li {
+float: left;
 width:235px;
 margin-bottom:7px;
 margin-right: 13px;
