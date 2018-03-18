@@ -18,6 +18,7 @@ font-family: "Microsoft YaHei",SimSun,'\5b8b\4f53',sans-serif;
 
 
 body>div{
+  min-width:960px;
   margin:0 auto;
 box-sizing: border-box;
 width: 1351px;
