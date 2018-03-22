@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>audio</title>
+</head>
+<body>
+<audio src="http://www.w3school.com.cn/i/song.ogg" controls="controls"></audio>
+<br>
+<!--上面的例子使用一个 Ogg 文件，适用于Firefox、Opera 以及 Chrome 浏览器。
+要确保适用于 Safari 浏览器，音频文件必须是 MP3 或 Wav 类型。
+audio 元素允许多个 source 元素。source 元素可以链接不同的音频文件。浏览器将使用第一个可识别的格式-->
+<audio controls="controls">
+    <source src="http://www.w3school.com.cn/i/song.ogg" type="audio/ogg">
+    <source src="http://www.w3school.com.cn/i/song.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
