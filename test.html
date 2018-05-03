@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <span class="inlinesparkline"></span>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.js"></script>
+  <script type="text/javascript">
+
+
+    $(function(){
+      var myvalues = [25,75];
+      var mycolors = ['green','orange'];
+      $('.inlinesparkline').sparkline(myvalues,{type:'pie',sliceColors:mycolors,offset:-90});
+    });
+  </script>
+
+</body>
+</html>
